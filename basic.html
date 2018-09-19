@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="vue-app">
+        <input v-model="name" placeholder="edit me">
+        <input type="checkbox" value="BBQ" v-model="foods">BBQ
+        <input type="checkbox" value="Pizza" v-model="foods"><label>Pizza</label>
+        <input type="checkbox" value="KFC" v-model="foods">KFC
+        <hr>
+        <input type="radio" value="Male" v-model="gender">ชาย
+        <input type="radio" value="Female" v-model="gender">หญิง
+
+    
+        <input type="text" name="" v-bind:value="name">
+        <input type="text" name="" v-bind:value="job">
+        <input type="text" v-on:keyup.enter="addCount" >
+        <button type="button" v-on:click="addAge" >Add</button>
+        <button type="button" v-on:click="SubtractAge" >Sub</button>
+        <hr>
+        Loop
+        <h1>{{ product[0] }}</h1>
+        <h2>{{ product[1] }}</h2>
+        <h3>{{ product[2] }}</h3>
+        <h4>{{ product[3] }}</h4>
+
+        <ul>
+            <li v-for="result in product">{{result}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="emp in employee">{{emp}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="emp in employee">{{emp.name}} | {{emp.age}}</li>
+        </ul>
+        
+        <hr>
+        <button type="button" v-on:click="like=true">Hello World(true)</button>
+
+        <button type="button" v-on:click="like=!like">Hello World(!like)</button>
+
+        <h1 v-if="like">Hello world Vue</h1>
+
+        <select v-model="job">
+            <option>Programmer</option>
+            <option>UX/UI</option>
+            <option>Graphics Desginer</option>
+        </select>
+        <h1>{{name}}</h1>
+        <p>{{job}}</p>
+        <p>{{age}}</p>
+        <h1>Website: <a v-bind:href="website">Click Link</a></h1>
+        <p>{{count}}</p>
+        <p>{{foods}}</p>
+        <p>{{gender}}</p>
+        <p>{{job}}</p>
+
+
+
+
+
+    </div>
+
+<script src="appBasic.js" charset="utf-8"></script>
+</body>
+</html>  

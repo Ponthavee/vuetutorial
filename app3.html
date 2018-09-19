@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="post">
+       Topic: {{title}} <br>
+       ข้อความ: {{message}}
+    </div>
+
+    <div id="comment">
+        <textarea name="name" rows="8" cols="80">{{text}}</textarea>
+    </div>
+
+    <div id="likeSystem">
+        <button type="button" name="button" v-on:click="like=!like" >Like</button>
+        {{like}}
+    </div>
+    <script src="app3.js" charset="utf-8"></script>
+</body>
+</html>

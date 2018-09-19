@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="vue-app">
+        <ponytag></ponytag>
+        <post></post>
+        <postprops title="Test Title1"></postprops>
+        <postprops title="Pony studio"></postprops>
+        <showview title="java Tutorial" v-bind:view="100"></showview>
+        <showview title="Vue Tutorial" ></showview>
+        <showview title="Photoshop" v-bind:view=500 ></showview>
+        <!-- <ul>
+            <li v-for="comment in comments">
+                {{comment}}
+            </li>
+        </ul> -->
+
+        <ul>
+            <li v-for="comment in comments" is="showcomment" v-bind:commentpost="comment">
+                {{comment}}
+            </li>
+        </ul>
+
+
+        <input type="text" v-model="newComment" v-on:keyup.enter="addComment" >
+    </div>   
+    
+    <script src="appComponenet.js" charset="utf-8"></script>
+</body>
+</html>
